@@ -237,3 +237,9 @@ body
     -webkit-animation-name: center-horning;
     animation-name: center-horning
 }
+
+.offline-msg {
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+}
