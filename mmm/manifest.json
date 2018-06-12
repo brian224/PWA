@@ -1,21 +1,20 @@
 {
-  "name": "給我一個賴床理由",
-  "short_name": "給我一個賴床理由",
-  "icons": [
-    {
-      "src": "/Content/img/shared/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/Content/img/shared/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/?source=pwa",
-  "scope": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#dce6e8e6"
+	"name": "給我一個賴床理由",
+	"short_name": "給我一個賴床理由",
+	"icons": [
+		{
+			"src": "/Content/img/shared/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}, {
+			"src": "/Content/img/shared/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/?source=pwa",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#dce6e8e6"
 }

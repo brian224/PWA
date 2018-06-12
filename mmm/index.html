@@ -37,8 +37,8 @@
 				<ul class="menu-list">
 					<li class="list b-inline-dt b-block-xs b-text-center-xs"><a href="index.html" class="b-link ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="reason">賴床理由產生器</a></li>
 					<li class="list b-inline-dt b-block-xs b-text-center-xs"><a href="product.html" class="b-link ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="product">產品介紹</a></li>
-					<li class="list b-inline-dt b-block-xs b-text-center-xs"><a href="" class="b-link ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="3M_web">3M官網</a></li>
-					<li class="list b-inline-dt b-block-xs b-text-center-xs"><a href="" class="b-link ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="buy">購買產品</a></li>
+					<li class="list b-inline-dt b-block-xs b-text-center-xs"><a href="http://www.3m-bedding.com.tw/" target="_blank" rel="noopener" class="b-link ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="3M_web">3M官網</a></li>
+					<li class="list b-inline-dt b-block-xs b-text-center-xs"><a href="http://nieh.3mbedding.com.tw/Home/ProductSeries" class="b-link ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="buy">購買產品</a></li>
 					<li class="list b-inline-dt b-block-xs b-text-center-xs">
 						<a href="http://www.facebook.com/sharer/sharer.php?u=http://f2e.sugarfun.com.tw/3M/Website/views/home/index.html?openExternalBrowser=1" class="btn-link btn-fb jQ-share" ga_cat="Nav" ga_event="click" ga_label="FB_Share">
 						</a>
@@ -204,15 +204,33 @@
 	<script defer src="/Scripts/js/factory.min.js?js=20180322"></script>
 	<script defer src="/Scripts/js/common.min.js?js=20180322"></script>
 	<script>
+		// var _space = 0;
+
 		if('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(registration) {
-				console.log('Service Worker Registered');
+				console.log('Service Worker Registered', registration);
 			});
 
 			navigator.serviceWorker.ready.then(function(registration) {
 				console.log('Service Worker Ready');
 			});
 		}
+
+		// if ('storage' in navigator && 'estimate' in navigator.storage) {
+		// 	navigator.storage.estimate().then(({usage, quota}) => {
+		// 		console.log(`Using ${usage} out of ${quota} bytes.`);
+		// 		_space = quota / 1000000;
+		// 	}).catch(error => {
+		// 		console.error('Loading storage estimate failed:');
+		// 		console.log(error.stack);
+		// 	});
+		// } else {
+		// 	console.error('navigator.storage.estimate API unavailable.');
+		// }
+
+		// setTimeout(function(){
+		// 	alert(_space.toFixed(0) + ' MB');
+		// }, 3000);
 	</script>
 </body>
 </html>
