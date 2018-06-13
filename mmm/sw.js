@@ -129,3 +129,17 @@ self.addEventListener('fetch', event => {
 		})
 	);
 });
+
+self.addEventListener('notificationclick', function(event) {
+	var _notification = event.notification;
+	var _action = event.action;
+
+	// console.log(notification);
+	if(_action === 'confirm') {
+		console.log('使用者點選確認');
+		_notification.close();
+	} else {
+		console.log('使用者沒興趣',event);
+		_notification.close();
+	}
+});
