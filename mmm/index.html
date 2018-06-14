@@ -12,14 +12,14 @@
 	<meta property="og:title" content="給我一個賴床理由" />
 	<meta property="og:description" name="description" content="讓3M和聶永真陪你賴床！馬上製作你的賴床理由" />
 	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://nieh.3mbedding.com.tw" />
+	<meta property="og:url" content="https://sugarfundemo.azurewebsites.net/" />
 	<meta property="og:image" content="/Content/img/shared/fb.png?img=20180322" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:site_name" content="給我一個賴床理由"/>
 	<title>給我一個賴床理由</title>
-	<link rel="canonical" href="http://nieh.3mbedding.com.tw" />
+	<link rel="canonical" href="https://sugarfundemo.azurewebsites.net/" />
 	<link rel="manifest" href="/manifest.json" />
 	<link rel="shortcut icon" type="image/x-icon" href="/Content/img/shared/favicon.ico?img=20180322" />
 	<link rel="stylesheet" type="text/css" href="/Content/css/style.css?css=20180322" />
@@ -145,8 +145,7 @@
 			</div>
 		</main>
 		<footer class="l-footer">
-			<small class="copyright b-block b-text-white b-text-center-xs">© 2018 All Rights Reserved <br class="b-hide-dt">3M台灣明尼蘇達礦業製造股份有限公司</small>
-			<button class="enable-notifications b-block b-text-white">推播</button>
+			<small class="enable-notifications copyright b-block b-text-white b-text-center-xs">© 2018 All Rights Reserved <br class="b-hide-dt">3M台灣明尼蘇達礦業製造股份有限公司</small>
 		</footer>
 	</div>
 	<div class="l-not-support">
@@ -206,20 +205,20 @@
 	<script defer src="/Scripts/js/factory.min.js?js=20180322"></script>
 	<script defer src="/Scripts/js/common.min.js?js=20180322"></script>
 	<script>
-		if('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(registration) {
-				console.log('Service Worker Registered', registration);
-			});
+		// if('serviceWorker' in navigator) {
+		// 	navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(registration) {
+		// 		console.log('Service Worker Registered', registration);
+		// 	});
 
-			navigator.serviceWorker.ready.then(function(registration) {
-				console.log('Service Worker Ready');
-			});
-		}
+		// 	navigator.serviceWorker.ready.then(function(registration) {
+		// 		console.log('Service Worker Ready');
+		// 	});
+		// }
 
 		if ('Notification' in window) {
 			document.querySelector('.enable-notifications').addEventListener('click', function(){
 				Notification.requestPermission(function(status){
-			        console.log('User Choice', status);
+			        // console.log('User Choice', status);
 			        if (status !== 'granted') {
 			            console.log('推播允許被拒絕了');
 			        } else {
