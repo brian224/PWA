@@ -12,7 +12,7 @@
 			"sizes": "512x512"
 		}
 	],
-	"start_url": "/PWA/mmm/?source=pwa",
+	"start_url": "/PWA/mmm/views/?source=pwa",
 	"scope": "/PWA/mmm/",
 	"display": "fullscreen",
 	"background_color": "#ffffff",
