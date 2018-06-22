@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-	<meta name="viewport" content="width=device-width, minimum-scale=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, viewport-fit=cover">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no" />
@@ -13,17 +13,17 @@
 	<meta property="og:description" name="description" content="讓3M和聶永真陪你賴床！馬上製作你的賴床理由" />
 	<meta property="og:type" content="website"/>
 	<meta property="og:url" content="https://sugarfundemo.azurewebsites.net/" />
-	<meta property="og:image" content="/Content/img/shared/fb.png?img=20180322" />
+	<meta property="og:image" content="/PWA/mmm/Content/img/shared/fb.png?img=20180322" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:site_name" content="給我一個賴床理由"/>
 	<title>給我一個賴床理由</title>
 	<link rel="canonical" href="https://sugarfundemo.azurewebsites.net/" />
-	<link rel="manifest" href="/manifest.json" />
-	<link rel="shortcut icon" type="image/x-icon" href="/Content/img/shared/favicon.ico?img=20180322" />
-	<link rel="stylesheet" type="text/css" href="/Content/css/style.css?css=20180322" />
-	<link rel="stylesheet" type="text/css" href="/Content/css/index.css?css=20180322" />
+	<link rel="manifest" href="/PWA/mmm/Scripts/json/manifest.json" />
+	<link rel="shortcut icon" type="image/x-icon" href="/PWA/mmm/Content/img/shared/favicon.ico?img=20180322" />
+	<link rel="stylesheet" type="text/css" href="/PWA/mmm/Content/css/style.css?css=20180322" />
+	<link rel="stylesheet" type="text/css" href="/PWA/mmm/Content/css/index.css?css=20180322" />
 </head>
 <body>
 	<div class="l-body is-full" data-page="index">
@@ -160,7 +160,7 @@
 	                    <li>
 	                        <a href="https://www.google.com.tw/chrome/browser/desktop/">
 	                            <span class="m-not-support-figure">
-	                                <img src="/Content/img/not-support/chrome.png?img=20180322" alt="Google Chrome">
+	                                <img src="/PWA/mmm/Content/img/not-support/chrome.png?img=20180322" alt="Google Chrome">
 	                            </span>
 	                            <p class="m-not-support-desc">Google Chrome</p>
 	                        </a>
@@ -168,7 +168,7 @@
 	                    <li>
 	                        <a href="https://www.mozilla.org/zh-TW/firefox/new/">
 	                            <span class="m-not-support-figure">
-	                                <img src="/Content/img/not-support/firefox.png?img=20180322" alt="Mozilla Firefox">
+	                                <img src="/PWA/mmm/Content/img/not-support/firefox.png?img=20180322" alt="Mozilla Firefox">
 	                            </span>
 	                            <p class="m-not-support-desc">Mozilla Firefox</p>
 	                        </a>
@@ -176,7 +176,7 @@
 	                    <li>
 	                        <a href="http://windows.microsoft.com/zh-tw/internet-explorer/download-ie">
 	                            <span class="m-not-support-figure">
-	                                <img src="/Content/img/not-support/ie.png?img=20180322" alt="Internet Explorer">
+	                                <img src="/PWA/mmm/Content/img/not-support/ie.png?img=20180322" alt="Internet Explorer">
 	                            </span>
 	                            <p class="m-not-support-desc">Internet Explorer</p>
 	                        </a>
@@ -184,7 +184,7 @@
 	                    <li>
 	                        <a href="https://support.apple.com/zh_TW/downloads/safari">
 	                            <span class="m-not-support-figure">
-	                                <img src="/Content/img/not-support/safari.png?img=20180322" alt="Safari">
+	                                <img src="/PWA/mmm/Content/img/not-support/safari.png?img=20180322" alt="Safari">
 	                            </span>
 	                            <p class="m-not-support-desc">Safari</p>
 	                        </a>
@@ -200,20 +200,20 @@
 	        </div>
 	    </div>
 	</div>
-	<script defer src="/Scripts/plugin/jquery/jquery.min.js?js=20180322"></script>
-	<script async src="/Scripts/plugin/pwacompat.min.js?js=20180322"></script>
-	<script defer src="/Scripts/js/factory.min.js?js=20180322"></script>
-	<script defer src="/Scripts/js/common.min.js?js=20180322"></script>
+	<script defer src="/PWA/mmm/Scripts/plugin/jquery/jquery.min.js?js=20180322"></script>
+	<script async src="/PWA/mmm/Scripts/plugin/pwacompat.min.js?js=20180322"></script>
+	<script defer src="/PWA/mmm/Scripts/js/factory.min.js?js=20180322"></script>
+	<script defer src="/PWA/mmm/Scripts/js/common.min.js?js=20180322"></script>
 	<script>
-		// if('serviceWorker' in navigator) {
-		// 	navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(registration) {
-		// 		console.log('Service Worker Registered', registration);
-		// 	});
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/PWA/mmm/sw.js', { scope: '/PWA/mmm/' }).then(function(registration) {
+				console.log('Service Worker Registered', registration);
+			});
 
-		// 	navigator.serviceWorker.ready.then(function(registration) {
-		// 		console.log('Service Worker Ready');
-		// 	});
-		// }
+			navigator.serviceWorker.ready.then(function(registration) {
+				console.log('Service Worker Ready');
+			});
+		}
 
 		if ('Notification' in window) {
 			document.querySelector('.enable-notifications').addEventListener('click', function(){
@@ -232,24 +232,23 @@
 		    if('serviceWorker' in navigator){
 		        var options = {
 		            body: '歡迎進入30天PWA的世界',
-		            icon: '/Content/img/shared/icon-192.png',
-		            image: '/Content/img/pwa/sticker.png',
+		            icon: '/PWA/mmm/Content/img/shared/icon-192.png',
+		            image: '/PWA/mmm/Content/img/pwa/sticker.png',
 		            dir: 'ltr',
 		            lang: 'zh-Hant', //BCP 47
 		            vibrate: [50, 50, 50, 50, 50, 50, 50, 50, 50],
-		            badge: '/Content/img/shared/icon-192.png',
+		            badge: '/PWA/mmm/Content/img/shared/icon-192.png',
 		            tag: 'confirm-notification',
 		            renotify: true,
 		            actions: [
-		                { action: 'confirm', title: '確認', icon: '/Content/img/pwa/y.png'},
-		                { action: 'cancel', title: '取消', icon: '/Content/img/pwa/n.png'}
+		                { action: 'confirm', title: '確認', icon: '/PWA/mmm/Content/img/pwa/y.png'},
+		                { action: 'cancel', title: '取消', icon: '/PWA/mmm/Content/img/pwa/n.png'}
 		            ]
 		        };
 		        navigator.serviceWorker.ready.then(function(sw){
 	                sw.showNotification('訂閱成功', options);
 	            })
 		    }  
-		     
 		}
 
 		// if ('storage' in navigator && 'estimate' in navigator.storage) {

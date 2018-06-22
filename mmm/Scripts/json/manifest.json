@@ -3,18 +3,18 @@
 	"short_name": "給我一個賴床理由",
 	"icons": [
 		{
-			"src": "/Content/img/shared/icon-192.png",
+			"src": "/PWA/mmm/Content/img/shared/icon-192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		}, {
-			"src": "/Content/img/shared/icon-512.png",
+			"src": "/PWA/mmm/Content/img/shared/icon-512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}
 	],
-	"start_url": "/?source=pwa",
-	"scope": "/",
-	"display": "standalone",
+	"start_url": "/PWA/mmm/?source=pwa",
+	"scope": "/PWA/mmm/",
+	"display": "fullscreen",
 	"background_color": "#ffffff",
 	"theme_color": "#dce6e8"
 }
